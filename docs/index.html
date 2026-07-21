@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Google Search Ranking Signal Analysis</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<h1>
+
+Google Search Ranking Signal Analysis
+
+</h1>
+
+<p>
+
+Machine Learning Capstone • FlyRank AI Internship
+
+</p>
+
+</div>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#abstract">Abstract</a></li>
+
+<li><a href="#introduction">Introduction</a></li>
+
+<li><a href="#dataset">Dataset</a></li>
+
+<li><a href="#methodology">Methodology</a></li>
+
+<li><a href="#results">Results</a></li>
+
+<li><a href="#recommendations">Recommendations</a></li>
+
+<li><a href="#conclusion">Conclusion</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<h2>
+
+Google Search Ranking Signal Analysis using Machine Learning
+
+</h2>
+
+<p>
+
+A machine learning based study to identify important Google Search ranking signals using Search Console and Google Analytics data.
+
+</p>
+
+<div class="card">
+
+<h3>Project Information</h3>
+
+<table>
+
+<tr>
+
+<td>Author</td>
+
+<td>Tanmay Shukla</td>
+
+</tr>
+
+<tr>
+
+<td>Institute</td>
+
+<td>Pranveer Singh Institute of Technology</td>
+
+</tr>
+
+<tr>
+
+<td>Internship</td>
+
+<td>FlyRank AI Internship</td>
+
+</tr>
+
+<tr>
+
+<td>Track</td>
+
+<td>Machine Learning</td>
+
+</tr>
+
+<tr>
+
+<td>Algorithm</td>
+
+<td>Random Forest Classifier</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="abstract">
+
+<div class="container">
+
+<h2>
+
+Abstract
+
+</h2>
+
+<p>
+
+Search visibility is one of the most important indicators of website performance. Organizations rely on Google Search Console and Google Analytics to monitor impressions, clicks, sessions, and engagement. However, identifying which signals contribute the most to search ranking is difficult because of the large number of interacting features.
+
+</p>
+
+<p>
+
+This project develops a machine learning framework using the FlyRank warehouse dataset to analyze ranking signals and classify webpages into high-visibility and low-visibility categories. A Random Forest classifier is trained on Search Console and Google Analytics metrics after appropriate preprocessing and feature engineering.
+
+</p>
+
+<p>
+
+Feature importance analysis reveals which engagement and search metrics have the strongest influence on ranking performance. The proposed pipeline provides interpretable recommendations that can help SEO teams prioritize optimization efforts.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="introduction">
+
+<div class="container">
+
+<h2>
+
+Introduction
+
+</h2>
+
+<p>
+
+Google Search ranking depends on hundreds of signals including content quality, user engagement, clicks, impressions, and behavioral metrics. Understanding these relationships enables organizations to improve visibility and organic traffic.
+
+</p>
+
+<p>
+
+The primary objective of this research is to investigate which measurable website signals contribute most strongly to search visibility and whether machine learning can accurately distinguish high-performing webpages from low-performing webpages.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="dataset">
+
+<div class="container">
+
+<h2>
+
+Dataset Description
+
+</h2>
+
+<div class="grid">
+
+<div class="box">
+
+<h3>
+
+Dataset Size
+
+</h3>
+
+<p>
+
+1297 Rows
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>
+
+Features
+
+</h3>
+
+<p>
+
+30 Variables
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>
+
+Sources
+
+</h3>
+
+<p>
+
+Google Search Console + Google Analytics 4
+
+</p>
+
+</div>
+
+</div>
+
+<h3>
+
+Important Features
+
+</h3>
+
+<ul>
+
+<li>Search Impressions</li>
+
+<li>Search Clicks</li>
+
+<li>Average Position</li>
+
+<li>Page Views</li>
+
+<li>Sessions</li>
+
+<li>Users</li>
+
+<li>Organic Traffic</li>
+
+<li>Referral Traffic</li>
+
+<li>AI Referral Sessions</li>
+
+<li>Scroll Events</li>
+
+</ul>
+
+</div>
+
+</section>
+
+  <section id="methodology">
+
+<div class="container">
+
+<h2>Methodology</h2>
+
+<div class="timeline">
+
+<div class="step">
+
+<h3>1. Data Collection</h3>
+
+<p>
+The FlyRank warehouse dataset integrates Google Search Console and
+Google Analytics 4 metrics including impressions, clicks, page views,
+sessions, engagement, AI referrals and user behavior.
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>2. Data Preprocessing</h3>
+
+<p>
+
+The dataset was cleaned by checking missing values, duplicate records,
+data types and feature consistency. Binary target labels were created
+based on search visibility while preventing data leakage by removing
+ranking variables used for target generation.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>3. Feature Engineering</h3>
+
+<p>
+
+Important behavioral metrics, traffic sources,
+engagement variables and search performance indicators
+were selected for model training.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>4. Model Training</h3>
+
+<p>
+
+A Random Forest Classifier was trained using an 80–20
+train-test split. Model performance was evaluated using
+Accuracy, Precision, Recall, F1 Score and ROC-AUC.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="results">
+
+<div class="container">
+
+<h2>Experimental Results</h2>
+
+<div class="cards">
+
+<div class="result-card">
+
+<h3>Model</h3>
+
+<p>Random Forest Classifier</p>
+
+</div>
+
+<div class="result-card">
+
+<h3>Train-Test Split</h3>
+
+<p>80 : 20</p>
+
+</div>
+
+<div class="result-card">
+
+<h3>Validation</h3>
+
+<p>5-Fold Cross Validation</p>
+
+</div>
+
+</div>
+
+<h3>Evaluation Metrics</h3>
+
+<table>
+
+<tr>
+
+<th>Metric</th>
+
+<th>Description</th>
+
+</tr>
+
+<tr>
+
+<td>Accuracy</td>
+
+<td>Overall prediction performance.</td>
+
+</tr>
+
+<tr>
+
+<td>Precision</td>
+
+<td>Correctness of positive predictions.</td>
+
+</tr>
+
+<tr>
+
+<td>Recall</td>
+
+<td>Ability to detect high visibility pages.</td>
+
+</tr>
+
+<tr>
+
+<td>F1 Score</td>
+
+<td>Balance between Precision and Recall.</td>
+
+</tr>
+
+<tr>
+
+<td>ROC AUC</td>
+
+<td>Overall classification capability.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Feature Importance Analysis</h2>
+
+<p>
+
+Random Forest provides feature importance scores that indicate
+which variables contribute most to predicting search visibility.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Rank</th>
+
+<th>Feature</th>
+
+<th>Observation</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+
+<td>Search Clicks</td>
+
+<td>Strong positive relationship with visibility.</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Search Impressions</td>
+
+<td>High visibility pages receive more impressions.</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Organic Sessions</td>
+
+<td>Organic traffic strongly correlates with ranking.</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Engaged Sessions</td>
+
+<td>User engagement improves page quality signals.</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Scroll Events</td>
+
+<td>Higher interaction often indicates better content quality.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section id="recommendations">
+
+<div class="container">
+
+<h2>SEO Recommendations</h2>
+
+<div class="grid">
+
+<div class="box">
+
+<h3>Improve Click Through Rate</h3>
+
+<p>
+
+Optimize page titles and meta descriptions to improve CTR.
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Increase Engagement</h3>
+
+<p>
+
+Improve readability and content quality to increase
+engaged sessions and time spent.
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Optimize Organic Traffic</h3>
+
+<p>
+
+Focus on high-quality keyword targeting and
+technical SEO improvements.
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Improve AI Visibility</h3>
+
+<p>
+
+Create structured and authoritative content that
+can be referenced by AI search assistants.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="conclusion">
+
+<div class="container">
+
+<h2>Conclusion</h2>
+
+<p>
+
+This study demonstrates that machine learning can successfully
+identify important ranking signals using Google Search Console
+and Google Analytics data.
+
+</p>
+
+<p>
+
+The Random Forest model provides an interpretable framework
+for predicting search visibility while highlighting the
+most influential ranking factors.
+
+</p>
+
+<p>
+
+The developed workflow can assist SEO professionals in
+prioritizing optimization activities based on evidence
+rather than intuition.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<h3>
+
+Google Search Ranking Signal Analysis using Machine Learning
+
+</h3>
+
+<p>
+
+Built for FlyRank AI Internship Capstone
+
+</p>
+
+<p>
+
+Author : Tanmay Shukla
+
+</p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
